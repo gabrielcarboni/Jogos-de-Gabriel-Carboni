@@ -4,40 +4,52 @@ programa
 
 	funcao inicio()
 	{
-		// =========================================
+		// =====================================
 		// LISTAS
-		// =========================================
+		// =====================================
 
-		cadeia reino[10]
+		cadeia reinos[10]
 		cadeia adj[10]
-		cadeia poder[10]
-		cadeia classe[5]
-		cadeia item[4]
-		cadeia inimigo[10]
+		cadeia poderes[10]
+		cadeia classes[5]
+		cadeia itens[4]
+		cadeia inimigos[10]
 
+		// BONUS
+		inteiro atkAdj[10]
+		inteiro vidaAdj[10]
+		inteiro pocAdj[10]
+
+		inteiro atkPoder[10]
+		inteiro vidaPoder[10]
+
+		inteiro atkClasse[5]
+		inteiro vidaClasse[5]
+
+		inteiro atkItem[4]
+		inteiro vidaItem[4]
+		inteiro defItem[4]
+
+		// INIMIGOS
 		inteiro vidaE[10]
-		inteiro ataqueE[10]
+		inteiro atkE[10]
 		inteiro xpE[10]
 		inteiro moedaE[10]
 
-		// =========================================
-		// 10 REINOS
-		// =========================================
+		// =====================================
+		// NOMES
+		// =====================================
 
-		reino[0] = "Reino da Aurora"
-		reino[1] = "Reino das Sombras"
-		reino[2] = "Reino de Cristal"
-		reino[3] = "Reino do Trovao"
-		reino[4] = "Reino do Gelo"
-		reino[5] = "Reino das Cinzas"
-		reino[6] = "Reino da Floresta"
-		reino[7] = "Reino do Deserto"
-		reino[8] = "Reino Celestial"
-		reino[9] = "Reino do Caos"
-
-		// =========================================
-		// 10 ADJETIVOS
-		// =========================================
+		reinos[0] = "Aurora"
+		reinos[1] = "Sombras"
+		reinos[2] = "Cristal"
+		reinos[3] = "Trovao"
+		reinos[4] = "Gelo"
+		reinos[5] = "Cinzas"
+		reinos[6] = "Floresta"
+		reinos[7] = "Deserto"
+		reinos[8] = "Celestial"
+		reinos[9] = "Caos"
 
 		adj[0] = "Lendario"
 		adj[1] = "Imortal"
@@ -50,58 +62,140 @@ programa
 		adj[8] = "Destruidor"
 		adj[9] = "Eterno"
 
-		// =========================================
-		// 10 PODERES
-		// =========================================
+		poderes[0] = "Tempo"
+		poderes[1] = "Realidade"
+		poderes[2] = "Telecinese"
+		poderes[3] = "Teletransporte"
+		poderes[4] = "Regeneracao"
+		poderes[5] = "Gravidade"
+		poderes[6] = "Duplicacao"
+		poderes[7] = "Elementos"
+		poderes[8] = "Invisibilidade"
+		poderes[9] = "Velocidade Suprema"
 
-		poder[0] = "Manipulacao do Tempo"
-		poder[1] = "Manipulacao da Realidade"
-		poder[2] = "Telecinese"
-		poder[3] = "Teletransporte"
-		poder[4] = "Regeneracao"
-		poder[5] = "Controle da Gravidade"
-		poder[6] = "Duplicacao"
-		poder[7] = "Controle dos Elementos"
-		poder[8] = "Invisibilidade"
-		poder[9] = "Velocidade Suprema"
+		classes[0] = "Guerreiro"
+		classes[1] = "Mago"
+		classes[2] = "Tanque"
+		classes[3] = "Assassino"
+		classes[4] = "Arqueiro"
 
-		// =========================================
-		// 5 CLASSES
-		// =========================================
+		itens[0] = "Espada"
+		itens[1] = "Armadura"
+		itens[2] = "Anel"
+		itens[3] = "Escudo"
 
-		classe[0] = "Guerreiro"
-		classe[1] = "Mago"
-		classe[2] = "Tanque"
-		classe[3] = "Assassino"
-		classe[4] = "Arqueiro"
+		inimigos[0] = "Goblin"
+		inimigos[1] = "Cavaleiro Sombrio"
+		inimigos[2] = "Golem de Cristal"
+		inimigos[3] = "Fera do Trovao"
+		inimigos[4] = "Guardiao do Gelo"
+		inimigos[5] = "Demonio das Cinzas"
+		inimigos[6] = "Monstro da Floresta"
+		inimigos[7] = "Rei do Deserto"
+		inimigos[8] = "Anjo Caido"
+		inimigos[9] = "Senhor do Caos"
 
-		// =========================================
-		// 4 ITENS
-		// =========================================
+		// =====================================
+		// BONUS DOS ADJETIVOS
+		// =====================================
 
-		item[0] = "Espada"
-		item[1] = "Armadura"
-		item[2] = "Anel"
-		item[3] = "Escudo"
+		atkAdj[0] = 10
+		atkAdj[1] = 0
+		atkAdj[2] = 15
+		atkAdj[3] = 10
+		atkAdj[4] = 0
+		atkAdj[5] = 0
+		atkAdj[6] = 5
+		atkAdj[7] = 0
+		atkAdj[8] = 20
+		atkAdj[9] = 15
 
-		// =========================================
-		// 10 INIMIGOS
-		// =========================================
+		vidaAdj[0] = 0
+		vidaAdj[1] = 40
+		vidaAdj[2] = 0
+		vidaAdj[3] = 20
+		vidaAdj[4] = 0
+		vidaAdj[5] = 50
+		vidaAdj[6] = 0
+		vidaAdj[7] = 25
+		vidaAdj[8] = 0
+		vidaAdj[9] = 30
 
-		inimigo[0] = "Goblin"
-		inimigo[1] = "Cavaleiro Sombrio"
-		inimigo[2] = "Golem de Cristal"
-		inimigo[3] = "Fera do Trovao"
-		inimigo[4] = "Guardiao do Gelo"
-		inimigo[5] = "Demonio das Cinzas"
-		inimigo[6] = "Monstro da Floresta"
-		inimigo[7] = "Rei do Deserto"
-		inimigo[8] = "Anjo Caido"
-		inimigo[9] = "Senhor do Caos"
+		pocAdj[0] = 0
+		pocAdj[1] = 0
+		pocAdj[2] = 0
+		pocAdj[3] = 0
+		pocAdj[4] = 2
+		pocAdj[5] = 0
+		pocAdj[6] = 0
+		pocAdj[7] = 0
+		pocAdj[8] = 0
+		pocAdj[9] = 0
 
-		// =========================================
-		// DADOS DOS INIMIGOS
-		// =========================================
+		// =====================================
+		// BONUS DOS PODERES
+		// =====================================
+
+		atkPoder[0] = 30
+		atkPoder[1] = 40
+		atkPoder[2] = 25
+		atkPoder[3] = 20
+		atkPoder[4] = 0
+		atkPoder[5] = 35
+		atkPoder[6] = 45
+		atkPoder[7] = 30
+		atkPoder[8] = 15
+		atkPoder[9] = 50
+
+		vidaPoder[0] = 0
+		vidaPoder[1] = 0
+		vidaPoder[2] = 0
+		vidaPoder[3] = 0
+		vidaPoder[4] = 60
+		vidaPoder[5] = 0
+		vidaPoder[6] = 0
+		vidaPoder[7] = 0
+		vidaPoder[8] = 0
+		vidaPoder[9] = 0
+
+		// =====================================
+		// BONUS DAS CLASSES
+		// =====================================
+
+		atkClasse[0] = 20
+		atkClasse[1] = 30
+		atkClasse[2] = 0
+		atkClasse[3] = 15
+		atkClasse[4] = 10
+
+		vidaClasse[0] = 0
+		vidaClasse[1] = 0
+		vidaClasse[2] = 80
+		vidaClasse[3] = 0
+		vidaClasse[4] = 0
+
+		// =====================================
+		// BONUS DOS ITENS
+		// =====================================
+
+		atkItem[0] = 15
+		atkItem[1] = 0
+		atkItem[2] = 10
+		atkItem[3] = 0
+
+		vidaItem[0] = 0
+		vidaItem[1] = 40
+		vidaItem[2] = 0
+		vidaItem[3] = 0
+
+		defItem[0] = 0
+		defItem[1] = 0
+		defItem[2] = 0
+		defItem[3] = 5
+
+		// =====================================
+		// INIMIGOS
+		// =====================================
 
 		vidaE[0] = 40
 		vidaE[1] = 55
@@ -114,16 +208,16 @@ programa
 		vidaE[8] = 165
 		vidaE[9] = 190
 
-		ataqueE[0] = 8
-		ataqueE[1] = 10
-		ataqueE[2] = 12
-		ataqueE[3] = 14
-		ataqueE[4] = 16
-		ataqueE[5] = 18
-		ataqueE[6] = 20
-		ataqueE[7] = 22
-		ataqueE[8] = 25
-		ataqueE[9] = 30
+		atkE[0] = 8
+		atkE[1] = 10
+		atkE[2] = 12
+		atkE[3] = 14
+		atkE[4] = 16
+		atkE[5] = 18
+		atkE[6] = 20
+		atkE[7] = 22
+		atkE[8] = 25
+		atkE[9] = 30
 
 		xpE[0] = 40
 		xpE[1] = 50
@@ -147,15 +241,12 @@ programa
 		moedaE[8] = 60
 		moedaE[9] = 100
 
-		// =========================================
-		// DADOS DO JOGADOR
-		// =========================================
+		// =====================================
+		// VARIAVEIS
+		// =====================================
 
 		cadeia nome
-		cadeia titulo
-		cadeia meuPoder
-		cadeia minhaClasse
-
+		cadeia enter
 		cadeia mochila[3]
 
 		inteiro vida = 100
@@ -166,232 +257,78 @@ programa
 		inteiro moedas = 50
 		inteiro pocoes = 3
 
+		inteiro fase = 0
+		inteiro vitorias = 0
+		inteiro missao = 0
+
 		inteiro sa
 		inteiro sp
 		inteiro sc
 		inteiro si
 		inteiro sr
 
-		inteiro qItem = 0
-		inteiro itemAtual = -1
+		inteiro itemAtual = 0
+		inteiro qItem = 1
 
-		inteiro fase = 0
 		inteiro menu
 		inteiro acao
+		inteiro i
 
 		inteiro vidaMonstro
 		inteiro dano
 		inteiro critico
-		inteiro ganhouItem
+		inteiro novoItem
 		inteiro fugiu
-		inteiro vitorias = 0
-		inteiro missao = 0
 
-		inteiro itemNovo
-		inteiro i
-
-		cadeia enter
-
-		// =========================================
-		// INICIO
-		// =========================================
+		// =====================================
+		// CRIACAO DO PERSONAGEM
+		// =====================================
 
 		limpa()
 
 		escreva("====================================\n")
-		escreva("           RPG AVENTURA\n")
+		escreva("          RPG AVENTURA\n")
 		escreva("====================================\n")
-		escreva("\n")
 
-		escreva("Digite o nome do personagem: ")
+		escreva("Nome: ")
 		leia(nome)
-
-		// =========================================
-		// SORTEIOS
-		// =========================================
 
 		sa = Util.sorteia(0, 9)
 		sp = Util.sorteia(0, 9)
 		sc = Util.sorteia(0, 4)
 		si = Util.sorteia(0, 3)
 
-		titulo = adj[sa]
-		meuPoder = poder[sp]
-		minhaClasse = classe[sc]
+		mochila[0] = itens[si]
 
-		// =========================================
-		// ITEM INICIAL
-		// =========================================
-
-		mochila[0] = item[si]
-		qItem = 1
-		itemAtual = 0
-
-		// =========================================
-		// BONUS DA CLASSE
-		// =========================================
-
-		se(sc == 0)
-		{
-			ataque = ataque + 20
-		}
-		senao se(sc == 1)
-		{
-			ataque = ataque + 30
-		}
-		senao se(sc == 2)
-		{
-			vida = vida + 80
-		}
-		senao se(sc == 3)
-		{
-			ataque = ataque + 15
-		}
-		senao
-		{
-			ataque = ataque + 10
-		}
-
-		// =========================================
-		// BONUS DO ADJETIVO
-		// =========================================
-
-		se(sa == 0)
-		{
-			ataque = ataque + 10
-		}
-		senao se(sa == 1)
-		{
-			vida = vida + 40
-		}
-		senao se(sa == 2)
-		{
-			ataque = ataque + 15
-		}
-		senao se(sa == 3)
-		{
-			vida = vida + 20
-			ataque = ataque + 10
-		}
-		senao se(sa == 4)
-		{
-			pocoes = pocoes + 2
-		}
-		senao se(sa == 5)
-		{
-			vida = vida + 50
-		}
-		senao se(sa == 6)
-		{
-			ataque = ataque + 5
-		}
-		senao se(sa == 7)
-		{
-			vida = vida + 25
-		}
-		senao se(sa == 8)
-		{
-			ataque = ataque + 20
-		}
-		senao
-		{
-			vida = vida + 30
-			ataque = ataque + 15
-		}
-
-		// =========================================
-		// BONUS DO PODER
-		// =========================================
-
-		se(sp == 0)
-		{
-			ataque = ataque + 30
-		}
-		senao se(sp == 1)
-		{
-			ataque = ataque + 40
-		}
-		senao se(sp == 2)
-		{
-			ataque = ataque + 25
-		}
-		senao se(sp == 3)
-		{
-			ataque = ataque + 20
-		}
-		senao se(sp == 4)
-		{
-			vida = vida + 60
-		}
-		senao se(sp == 5)
-		{
-			ataque = ataque + 35
-		}
-		senao se(sp == 6)
-		{
-			ataque = ataque + 45
-		}
-		senao se(sp == 7)
-		{
-			ataque = ataque + 30
-		}
-		senao se(sp == 8)
-		{
-			ataque = ataque + 15
-		}
-		senao
-		{
-			ataque = ataque + 50
-		}
-
-		// =========================================
-		// BONUS DO ITEM INICIAL
-		// =========================================
-
-		se(si == 0)
-		{
-			ataque = ataque + 15
-		}
-		senao se(si == 1)
-		{
-			vida = vida + 40
-		}
-		senao se(si == 2)
-		{
-			ataque = ataque + 10
-		}
-		senao
-		{
-			defesa = defesa + 5
-		}
-
-		// =========================================
-		// MOSTRA PERSONAGEM
-		// =========================================
+		// APLICA BONUS
+		ataque = ataque + atkAdj[sa] + atkPoder[sp] + atkClasse[sc] + atkItem[si]
+		vida = vida + vidaAdj[sa] + vidaPoder[sp] + vidaClasse[sc] + vidaItem[si]
+		defesa = defesa + defItem[si]
+		pocoes = pocoes + pocAdj[sa]
 
 		limpa()
 
 		escreva("====================================\n")
-		escreva("       PERSONAGEM CRIADO!\n")
+		escreva("       PERSONAGEM CRIADO\n")
 		escreva("====================================\n")
 		escreva("Nome: ", nome, "\n")
-		escreva("Classe: ", minhaClasse, "\n")
-		escreva("Titulo: ", titulo, "\n")
-		escreva("Poder: ", meuPoder, "\n")
-		escreva("Item: ", mochila[itemAtual], "\n")
+		escreva("Classe: ", classes[sc], "\n")
+		escreva("Titulo: ", adj[sa], "\n")
+		escreva("Poder: ", poderes[sp], "\n")
+		escreva("Item: ", mochila[0], "\n")
 		escreva("------------------------------------\n")
 		escreva("Vida: ", vida, "\n")
 		escreva("Ataque: ", ataque, "\n")
 		escreva("Defesa: ", defesa, "\n")
 		escreva("====================================\n")
 
-		escreva("\nMissao: derrote 3 inimigos!\n")
-		escreva("\nPressione ENTER para continuar.")
+		escreva("\nMissao: derrote 3 inimigos.\n")
+		escreva("Pressione ENTER.")
 		leia(enter)
 
-		// =========================================
-		// JOGO PRINCIPAL
-		// =========================================
+		// =====================================
+		// JOGO
+		// =====================================
 
 		enquanto(vida > 0 e fase < 10)
 		{
@@ -400,15 +337,10 @@ programa
 			escreva("====================================\n")
 			escreva("              MENU\n")
 			escreva("====================================\n")
-			escreva("Jogador: ", nome, "\n")
 			escreva("Fase: ", fase + 1, "/10\n")
-			escreva("------------------------------------\n")
-			escreva("Vida: ", vida, "\n")
-			escreva("Ataque: ", ataque, "\n")
-			escreva("Defesa: ", defesa, "\n")
-			escreva("Nivel: ", nivel, "\n")
-			escreva("XP: ", xp, "\n")
-			escreva("Moedas: ", moedas, "\n")
+			escreva("Vida: ", vida, "  Ataque: ", ataque, "\n")
+			escreva("Defesa: ", defesa, "  Nivel: ", nivel, "\n")
+			escreva("XP: ", xp, "  Moedas: ", moedas, "\n")
 			escreva("Pocoes: ", pocoes, "\n")
 			escreva("------------------------------------\n")
 			escreva("1 - Explorar\n")
@@ -433,100 +365,56 @@ programa
 					vidaMonstro = vidaE[fase]
 					fugiu = 0
 
-					limpa()
-
-					escreva("====================================\n")
-					escreva("             EXPLORACAO\n")
-					escreva("====================================\n")
-					escreva("Reino: ", reino[sr], "\n")
-					escreva("Inimigo: ", inimigo[fase], "\n")
-					escreva("Vida do inimigo: ", vidaMonstro, "\n")
-					escreva("Ataque do inimigo: ", ataqueE[fase], "\n")
-					escreva("====================================\n")
-
-					escreva("\nPressione ENTER para comecar.")
-					leia(enter)
-
-					// =================================
-					// BATALHA
-					// =================================
-
 					enquanto(vida > 0 e vidaMonstro > 0 e fugiu == 0)
 					{
 						limpa()
 
 						escreva("====================================\n")
-						escreva("              BATALHA\n")
+						escreva("Reino: ", reinos[sr], "\n")
+						escreva("Inimigo: ", inimigos[fase], "\n")
 						escreva("====================================\n")
-						escreva("Reino: ", reino[sr], "\n")
-						escreva("Inimigo: ", inimigo[fase], "\n")
-						escreva("------------------------------------\n")
 						escreva("Sua vida: ", vida, "\n")
 						escreva("Vida inimigo: ", vidaMonstro, "\n")
 						escreva("------------------------------------\n")
 						escreva("1 - Atacar\n")
 						escreva("2 - Defender\n")
-						escreva("3 - Usar pocao\n")
+						escreva("3 - Pocao\n")
 						escreva("4 - Fugir\n")
-						escreva("====================================\n")
 						escreva("Escolha: ")
 						leia(acao)
 
 						escolha(acao)
 						{
-							// =============================
-							// ATACAR
-							// =============================
-
 							caso 1:
 
 								critico = Util.sorteia(1, 5)
 
-								limpa()
-
-								escreva("====================================\n")
-
 								se(critico == 5)
 								{
-									escreva("          GOLPE CRITICO!\n")
-									escreva("====================================\n")
-									escreva("Dano: ", ataque * 2, "\n")
-
-									vidaMonstro = vidaMonstro - (ataque * 2)
+									vidaMonstro = vidaMonstro - ataque * 2
+									escreva("\nGOLPE CRITICO!\n")
 								}
 								senao
 								{
-									escreva("             ATAQUE!\n")
-									escreva("====================================\n")
-									escreva("Dano: ", ataque, "\n")
-
 									vidaMonstro = vidaMonstro - ataque
+									escreva("\nVoce atacou!\n")
 								}
 
 								se(vidaMonstro > 0)
 								{
-									vida = vida - ataqueE[fase]
-									escreva("\nO inimigo atacou voce!\n")
-									escreva("Dano recebido: ", ataqueE[fase], "\n")
+									dano = atkE[fase]
+									vida = vida - dano
+									escreva("Dano recebido: ", dano, "\n")
 								}
-
-								escreva("\nSua vida: ", vida, "\n")
-								escreva("Vida inimigo: ", vidaMonstro, "\n")
 
 								escreva("\nPressione ENTER.")
 								leia(enter)
 
 								pare
 
-							// =============================
-							// DEFENDER
-							// =============================
-
 							caso 2:
 
-								limpa()
-
-								dano = ataqueE[fase] - defesa
+								dano = atkE[fase] - defesa
 
 								se(dano < 1)
 								{
@@ -535,49 +423,33 @@ programa
 
 								vida = vida - dano
 
-								escreva("====================================\n")
-								escreva("             DEFESA\n")
-								escreva("====================================\n")
-								escreva("Voce se defendeu!\n")
+								escreva("\nVoce defendeu!\n")
 								escreva("Dano recebido: ", dano, "\n")
-								escreva("Sua vida: ", vida, "\n")
 
 								escreva("\nPressione ENTER.")
 								leia(enter)
 
 								pare
 
-							// =============================
-							// POCAO
-							// =============================
-
 							caso 3:
-
-								limpa()
 
 								se(pocoes > 0)
 								{
 									vida = vida + 30
 									pocoes = pocoes - 1
 
-									escreva("====================================\n")
-									escreva("              POCAO\n")
-									escreva("====================================\n")
-									escreva("Voce recuperou 30 de vida!\n")
-
 									se(vida > 300)
 									{
 										vida = 300
 									}
 
-									vida = vida - ataqueE[fase]
+									vida = vida - atkE[fase]
 
-									escreva("\nO inimigo atacou voce!\n")
-									escreva("Sua vida: ", vida, "\n")
+									escreva("\nPocao usada!\n")
 								}
 								senao
 								{
-									escreva("Voce nao tem pocoes!\n")
+									escreva("\nSem pocoes!\n")
 								}
 
 								escreva("\nPressione ENTER.")
@@ -585,20 +457,10 @@ programa
 
 								pare
 
-							// =============================
-							// FUGIR
-							// =============================
-
 							caso 4:
 
-								limpa()
-
-								escreva("====================================\n")
-								escreva("               FUGA\n")
-								escreva("====================================\n")
-								escreva("Voce fugiu da batalha!\n")
-
 								fugiu = 1
+								escreva("\nVoce fugiu!\n")
 
 								escreva("\nPressione ENTER.")
 								leia(enter)
@@ -608,7 +470,6 @@ programa
 							caso contrario:
 
 								escreva("\nOpcao invalida!\n")
-								escreva("Pressione ENTER.")
 								leia(enter)
 						}
 					}
@@ -624,71 +485,45 @@ programa
 						escreva("====================================\n")
 						escreva("        INIMIGO DERROTADO!\n")
 						escreva("====================================\n")
-						escreva("Inimigo: ", inimigo[fase], "\n")
-						escreva("XP ganho: ", xpE[fase], "\n")
-						escreva("Moedas ganhas: ", moedaE[fase], "\n")
+						escreva("XP: +", xpE[fase], "\n")
+						escreva("Moedas: +", moedaE[fase], "\n")
 
 						xp = xp + xpE[fase]
 						moedas = moedas + moedaE[fase]
-						vitorias = vitorias + 1
-
-						// =============================
-						// NIVEL
-						// =============================
+						vitorias++
 
 						se(xp >= 100)
 						{
 							xp = xp - 100
-							nivel = nivel + 1
+							nivel++
 							vida = vida + 20
 							ataque = ataque + 5
 
-							escreva("\n*** SUBIU DE NIVEL! ***\n")
-							escreva("Nivel: ", nivel, "\n")
-							escreva("+20 vida\n")
-							escreva("+5 ataque\n")
+							escreva("\nSUBIU DE NIVEL!\n")
 						}
-
-						// =============================
-						// MISSAO
-						// =============================
 
 						se(vitorias == 3 e missao == 0)
 						{
 							moedas = moedas + 50
 							missao = 1
 
-							escreva("\n*** MISSAO CONCLUIDA! ***\n")
-							escreva("Recompensa: 50 moedas!\n")
+							escreva("\nMISSAO CONCLUIDA! +50 moedas\n")
 						}
 
-						// =============================
-						// ITEM ALEATORIO
-						// =============================
+						novoItem = Util.sorteia(1, 5)
 
-						ganhouItem = Util.sorteia(1, 5)
-
-						se(ganhouItem == 5)
+						se(novoItem == 5 e qItem < 3)
 						{
-							se(qItem < 3)
-							{
-								itemNovo = Util.sorteia(0, 3)
+							si = Util.sorteia(0, 3)
+							mochila[qItem] = itens[si]
+							qItem++
 
-								mochila[qItem] = item[itemNovo]
-								qItem = qItem + 1
-
-								escreva("\n*** ITEM ENCONTRADO! ***\n")
-								escreva("Voce encontrou: ", item[itemNovo], "\n")
-							}
-							senao
-							{
-								escreva("\nSeu inventario esta cheio!\n")
-							}
+							escreva("\nITEM ENCONTRADO: ", itens[si], "\n")
 						}
 
-						fase = fase + 1
+						fase++
 
-						escreva("\nPressione ENTER para voltar ao menu.")
+						escreva("\nPressione ENTER.")
 						leia(enter)
 					}
 
@@ -706,10 +541,10 @@ programa
 					escreva("              STATUS\n")
 					escreva("====================================\n")
 					escreva("Nome: ", nome, "\n")
-					escreva("Classe: ", minhaClasse, "\n")
-					escreva("Titulo: ", titulo, "\n")
-					escreva("Poder: ", meuPoder, "\n")
-					escreva("Item equipado: ", mochila[itemAtual], "\n")
+					escreva("Classe: ", classes[sc], "\n")
+					escreva("Titulo: ", adj[sa], "\n")
+					escreva("Poder: ", poderes[sp], "\n")
+					escreva("Item: ", mochila[itemAtual], "\n")
 					escreva("------------------------------------\n")
 					escreva("Nivel: ", nivel, "\n")
 					escreva("XP: ", xp, "\n")
@@ -719,7 +554,6 @@ programa
 					escreva("Moedas: ", moedas, "\n")
 					escreva("Pocoes: ", pocoes, "\n")
 					escreva("Vitorias: ", vitorias, "\n")
-					escreva("====================================\n")
 
 					escreva("\nPressione ENTER.")
 					leia(enter)
@@ -735,16 +569,14 @@ programa
 					limpa()
 
 					escreva("====================================\n")
-					escreva("                LOJA\n")
+					escreva("               LOJA\n")
 					escreva("====================================\n")
 					escreva("Moedas: ", moedas, "\n")
-					escreva("------------------------------------\n")
-					escreva("1 - Pocao ........ 20 moedas\n")
-					escreva("2 - +10 ataque ... 50 moedas\n")
-					escreva("3 - +20 vida ..... 50 moedas\n")
-					escreva("4 - +5 defesa .... 50 moedas\n")
+					escreva("1 - Pocao = 20\n")
+					escreva("2 - +10 ataque = 50\n")
+					escreva("3 - +20 vida = 50\n")
+					escreva("4 - +5 defesa = 50\n")
 					escreva("5 - Sair\n")
-					escreva("====================================\n")
 					escreva("Escolha: ")
 					leia(acao)
 
@@ -754,14 +586,8 @@ programa
 
 							se(moedas >= 20)
 							{
-								pocoes = pocoes + 1
+								pocoes++
 								moedas = moedas - 20
-
-								escreva("\nPocao comprada!\n")
-							}
-							senao
-							{
-								escreva("\nMoedas insuficientes!\n")
 							}
 
 							pare
@@ -772,12 +598,6 @@ programa
 							{
 								ataque = ataque + 10
 								moedas = moedas - 50
-
-								escreva("\nAtaque aumentado!\n")
-							}
-							senao
-							{
-								escreva("\nMoedas insuficientes!\n")
 							}
 
 							pare
@@ -788,12 +608,6 @@ programa
 							{
 								vida = vida + 20
 								moedas = moedas - 50
-
-								escreva("\nVida aumentada!\n")
-							}
-							senao
-							{
-								escreva("\nMoedas insuficientes!\n")
 							}
 
 							pare
@@ -804,23 +618,14 @@ programa
 							{
 								defesa = defesa + 5
 								moedas = moedas - 50
-
-								escreva("\nDefesa aumentada!\n")
-							}
-							senao
-							{
-								escreva("\nMoedas insuficientes!\n")
 							}
 
 							pare
 
 						caso 5:
-
-							escreva("\nSaindo da loja...\n")
 							pare
 
 						caso contrario:
-
 							escreva("\nOpcao invalida!\n")
 					}
 
@@ -840,16 +645,12 @@ programa
 					escreva("====================================\n")
 					escreva("              MISSAO\n")
 					escreva("====================================\n")
+					escreva("Derrote 3 inimigos.\n")
+					escreva("Progresso: ", vitorias, "/3\n")
 
-					se(missao == 0)
-					{
-						escreva("Objetivo: derrotar 3 inimigos.\n")
-						escreva("Progresso: ", vitorias, "/3\n")
-					}
-					senao
+					se(missao == 1)
 					{
 						escreva("Missao concluida!\n")
-						escreva("Recompensa: 50 moedas.\n")
 					}
 
 					escreva("\nPressione ENTER.")
@@ -866,11 +667,8 @@ programa
 					limpa()
 
 					escreva("====================================\n")
-					escreva("             INVENTARIO\n")
+					escreva("            INVENTARIO\n")
 					escreva("====================================\n")
-
-					escreva("Espacos: ", qItem, "/3\n")
-					escreva("------------------------------------\n")
 
 					para(i = 0; i < qItem; i++)
 					{
@@ -884,63 +682,69 @@ programa
 						escreva("\n")
 					}
 
-					escreva("------------------------------------\n")
-					escreva("Escolha o item para equipar: ")
+					escreva("\n0 - Sair\n")
+					escreva("Escolha: ")
 					leia(si)
 
-					se(si >= 1 e si <= qItem)
+					se(si > 0 e si <= qItem)
 					{
-						inteiro novoItem = si - 1
+						inteiro novo = si - 1
 
-						// =============================
-						// RETIRA BONUS DO ITEM ANTIGO
-						// =============================
-
-						se(mochila[itemAtual] == "Espada")
+						// RETIRA ITEM ANTIGO
+						se(mochila[itemAtual] == itens[0])
 						{
-							ataque = ataque - 15
+							ataque = ataque - atkItem[0]
+							vida = vida - vidaItem[0]
+							defesa = defesa - defItem[0]
 						}
-						senao se(mochila[itemAtual] == "Armadura")
+						senao se(mochila[itemAtual] == itens[1])
 						{
-							vida = vida - 40
+							ataque = ataque - atkItem[1]
+							vida = vida - vidaItem[1]
+							defesa = defesa - defItem[1]
 						}
-						senao se(mochila[itemAtual] == "Anel")
+						senao se(mochila[itemAtual] == itens[2])
 						{
-							ataque = ataque - 10
+							ataque = ataque - atkItem[2]
+							vida = vida - vidaItem[2]
+							defesa = defesa - defItem[2]
 						}
-						senao se(mochila[itemAtual] == "Escudo")
+						senao
 						{
-							defesa = defesa - 5
-						}
-
-						// =============================
-						// COLOCA BONUS DO NOVO ITEM
-						// =============================
-
-						se(mochila[novoItem] == "Espada")
-						{
-							ataque = ataque + 15
-						}
-						senao se(mochila[novoItem] == "Armadura")
-						{
-							vida = vida + 40
-						}
-						senao se(mochila[novoItem] == "Anel")
-						{
-							ataque = ataque + 10
-						}
-						senao se(mochila[novoItem] == "Escudo")
-						{
-							defesa = defesa + 5
+							ataque = ataque - atkItem[3]
+							vida = vida - vidaItem[3]
+							defesa = defesa - defItem[3]
 						}
 
-						itemAtual = novoItem
+						// COLOCA ITEM NOVO
+						se(mochila[novo] == itens[0])
+						{
+							ataque = ataque + atkItem[0]
+							vida = vida + vidaItem[0]
+							defesa = defesa + defItem[0]
+						}
+						senao se(mochila[novo] == itens[1])
+						{
+							ataque = ataque + atkItem[1]
+							vida = vida + vidaItem[1]
+							defesa = defesa + defItem[1]
+						}
+						senao se(mochila[novo] == itens[2])
+						{
+							ataque = ataque + atkItem[2]
+							vida = vida + vidaItem[2]
+							defesa = defesa + defItem[2]
+						}
+						senao
+						{
+							ataque = ataque + atkItem[3]
+							vida = vida + vidaItem[3]
+							defesa = defesa + defItem[3]
+						}
 
-						escreva("\nItem equipado: ", mochila[itemAtual], "\n")
-					}
-					senao
-					{
-						escreva("\nOpcao invalida!\n")
+						itemAtual = novo
+
+						escreva("\nItem equipado!\n")
 					}
 
 					escreva("\nPressione ENTER.")
@@ -964,42 +768,33 @@ programa
 
 				caso contrario:
 
-					limpa()
-
-					escreva("====================================\n")
-					escreva("          OPCAO INVALIDA!\n")
-					escreva("====================================\n")
-
-					escreva("\nPressione ENTER.")
+					escreva("\nOpcao invalida!\n")
 					leia(enter)
 			}
 		}
 
-		// =========================================
+		// =====================================
 		// CHEFE FINAL
-		// =========================================
+		// =====================================
 
-		se(vida > 0 e fase == 10)
+		se(vida > 0)
 		{
 			inteiro vidaChefe = 300
-			inteiro ataqueChefe = 35
+			inteiro atkChefe = 35
 
 			enquanto(vida > 0 e vidaChefe > 0)
 			{
 				limpa()
 
 				escreva("====================================\n")
-				escreva("            CHEFE FINAL\n")
+				escreva("           SENHOR DO CAOS\n")
 				escreva("====================================\n")
-				escreva("         SENHOR DO CAOS\n")
-				escreva("------------------------------------\n")
 				escreva("Sua vida: ", vida, "\n")
-				escreva("Vida do chefe: ", vidaChefe, "\n")
+				escreva("Vida chefe: ", vidaChefe, "\n")
 				escreva("------------------------------------\n")
 				escreva("1 - Atacar\n")
 				escreva("2 - Defender\n")
-				escreva("3 - Usar pocao\n")
-				escreva("====================================\n")
+				escreva("3 - Pocao\n")
 				escreva("Escolha: ")
 				leia(acao)
 
@@ -1011,31 +806,25 @@ programa
 
 						se(critico == 5)
 						{
-							vidaChefe = vidaChefe - (ataque * 2)
-
+							vidaChefe = vidaChefe - ataque * 2
 							escreva("\nGOLPE CRITICO!\n")
 						}
 						senao
 						{
 							vidaChefe = vidaChefe - ataque
-
-							escreva("\nVoce atacou o chefe!\n")
+							escreva("\nVoce atacou!\n")
 						}
 
 						se(vidaChefe > 0)
 						{
-							vida = vida - ataqueChefe
-							escreva("O chefe atacou voce!\n")
+							vida = vida - atkChefe
 						}
-
-						escreva("\nPressione ENTER.")
-						leia(enter)
 
 						pare
 
 					caso 2:
 
-						dano = ataqueChefe - defesa
+						dano = atkChefe - defesa
 
 						se(dano < 1)
 						{
@@ -1043,12 +832,7 @@ programa
 						}
 
 						vida = vida - dano
-
 						escreva("\nVoce defendeu!\n")
-						escreva("Dano recebido: ", dano, "\n")
-
-						escreva("\nPressione ENTER.")
-						leia(enter)
 
 						pare
 
@@ -1057,61 +841,43 @@ programa
 						se(pocoes > 0)
 						{
 							vida = vida + 30
-							pocoes = pocoes - 1
+							pocoes--
 
 							se(vida > 300)
 							{
 								vida = 300
 							}
 
-							vida = vida - ataqueChefe
-
-							escreva("\nVoce usou uma pocao!\n")
-							escreva("O chefe atacou voce!\n")
+							vida = vida - atkChefe
+							escreva("\nPocao usada!\n")
 						}
-						senao
-						{
-							escreva("\nVoce nao tem pocoes!\n")
-						}
-
-						escreva("\nPressione ENTER.")
-						leia(enter)
 
 						pare
 
 					caso contrario:
 
 						escreva("\nOpcao invalida!\n")
-						escreva("\nPressione ENTER.")
-						leia(enter)
 				}
-			}
 
-			// =================================
-			// FINAL
-			// =================================
+				escreva("\nPressione ENTER.")
+				leia(enter)
+			}
 
 			limpa()
 
 			se(vida > 0)
 			{
 				escreva("====================================\n")
-				escreva("          VOCE VENCEU!\n")
+				escreva("           VOCE VENCEU!\n")
 				escreva("====================================\n")
-				escreva("\n")
 				escreva("Parabens, ", nome, "!\n")
-				escreva("Classe: ", minhaClasse, "\n")
-				escreva("Titulo: ", titulo, "\n")
-				escreva("Poder: ", meuPoder, "\n")
-				escreva("Nivel final: ", nivel, "\n")
+				escreva("Nivel: ", nivel, "\n")
 				escreva("Moedas: ", moedas, "\n")
-				escreva("Vitorias: ", vitorias, "\n")
-				escreva("\n====================================\n")
 			}
 			senao
 			{
 				escreva("====================================\n")
-				escreva("            GAME OVER\n")
+				escreva("             GAME OVER\n")
 				escreva("====================================\n")
 			}
 		}
