@@ -12,6 +12,7 @@ programa
         {
             retorne ataque * 2
         }
+
         retorne ataque
     }
 
@@ -90,24 +91,10 @@ programa
         reino[8] = "Celestial"
         reino[9] = "Caos"
 
-        // Historias maiores, mas simples para o projeto
+        // ================================
+        // HISTORIAS
+        // ================================
 
-        adj[4] = "Misterioso"
-        adj[5] = "Invencivel"
-        adj[6] = "Sombrio"
-        adj[7] = "Divino"
-        adj[8] = "Destruidor"
-        adj[9] = "Eterno"
-
-        atkAdj[0] = 10
-        atkAdj[1] = 0
-        atkAdj[2] = 15
-        atkAdj[3] = 10
-        atkAdj[4] = 0
-        atkAdj[5] = 0
-        atkAdj[6] = 5
-        atkAdj[7] = 0
-        atkAdj[8] = 20
         historia[0] = "Uma luz dourada ilumina as montanhas de Aurora. O reino parece tranquilo, mas uma estranha energia pode ser sentida no ar."
         historia[1] = "As sombras cobrem quase todo o reino. Poucos aventureiros conseguem atravessar este lugar sem sentir que estao sendo observados."
         historia[2] = "Grandes cristais surgem por toda parte. Eles guardam uma energia antiga que pode ser usada tanto para proteger quanto para destruir."
@@ -127,6 +114,22 @@ programa
         adj[1] = "Imortal"
         adj[2] = "Implacavel"
         adj[3] = "Supremo"
+        adj[4] = "Misterioso"
+        adj[5] = "Invencivel"
+        adj[6] = "Sombrio"
+        adj[7] = "Divino"
+        adj[8] = "Destruidor"
+        adj[9] = "Eterno"
+
+        atkAdj[0] = 10
+        atkAdj[1] = 0
+        atkAdj[2] = 15
+        atkAdj[3] = 10
+        atkAdj[4] = 0
+        atkAdj[5] = 0
+        atkAdj[6] = 5
+        atkAdj[7] = 0
+        atkAdj[8] = 20
         atkAdj[9] = 15
 
         vidaAdj[0] = 0
@@ -961,31 +964,31 @@ programa
 
                     retorne
 
-                    // ================================
-                    // CRIADORES
-                    // ================================
+                // ================================
+                // CRIADORES
+                // ================================
 
                 caso 7:
 
-                        limpa()
+                    limpa()
 
-                       escreva("====================================\n")
-                        escreva("          CRIADORES DA LENDA\n")
-                        escreva("====================================\n")
-                        escreva("\n")
-                        escreva("Este jogo foi desenvolvido por:\n")
-                        escreva("\n")
-                       escreva("- Gabriel Carboni de Assis\n")
-                        escreva("\n")
-                        escreva("------------------------------------\n")
-                        escreva("Projeto desenvolvido em Portugol.\n")
-                        escreva("Obrigado por jogar o RPG o jogo das Lendas!\n")
-                        escreva("------------------------------------\n")
-                        escreva("\n")
-                        escreva("Pressione ENTER.")
-                        leia(enter)
+                    escreva("====================================\n")
+                    escreva("          CRIADORES DA LENDA\n")
+                    escreva("====================================\n")
+                    escreva("\n")
+                    escreva("Este jogo foi desenvolvido por:\n")
+                    escreva("\n")
+                    escreva("- Gabriel Carboni de Assis\n")
+                    escreva("\n")
+                    escreva("------------------------------------\n")
+                    escreva("Projeto desenvolvido em Portugol.\n")
+                    escreva("Obrigado por jogar o RPG o jogo das Lendas!\n")
+                    escreva("------------------------------------\n")
+                    escreva("\n")
+                    escreva("Pressione ENTER.")
+                    leia(enter)
 
-                        pare
+                    pare
 
                 caso contrario:
 
